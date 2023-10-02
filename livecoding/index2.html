@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+#menu {
+   width: 300px;
+   background-color: gray;
+   height: 90dvh;
+}
+
+li a {
+   text-decoration: none;
+}
+  </style>
+</head>
+<body>
+  <a id="menu-btn" href="#">Menu</a>
+  <div id="menu"> 
+      <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+      </ul>
+  </div>
+
+  <input type="text" id="demo">
+  <input type="submit" id="create">
+  <ul id="list"></ul>
+  <script>
+
+let menuStatus = false;
+document.getElementById("menu").style.marginLeft = "-350px";
+function menuToggle() {
+   if(menuStatus == false) {
+       document.getElementById("menu").style.marginLeft = "0px";
+       document.getElementById("menu").style.transition = "1s";
+       menuStatus = true;
+   }else {
+       document.getElementById("menu").style.marginLeft = "-350px";
+       menuStatus = false;
+   }
+}
+document.getElementById("menu-btn").addEventListener("click",menuToggle);
+setTimeout(()=>{alert("Hello world!")},1000);
+function createTask(){
+   let newTask = document.getElementById("demo").value;
+   // we select the input from the id and .value will take the value from the input
+
+   document.getElementById("list").innerHTML += `<li>${newTask} </li>`;
+   addRemoveToList();
+}
+
+document.getElementById("create").addEventListener("click",createTask);
+
+function removeItem(){
+   this.style.opacity= "0";
+   // (this) here will back to the element that we will target or select
+   this.style.transition = "1s";
+   setTimeout(()=>{this.remove();},1000);
+}
+
+
+function addRemoveToList(){
+   var items = document.getElementsByTagName("li");
+   for ( let i in items ){
+       items[i].addEventListener("click",removeItem);
+   }
+}
+  </script>
+</body>
+</html>

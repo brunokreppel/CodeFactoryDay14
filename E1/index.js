@@ -31,23 +31,6 @@ console.log(highest)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function weather() {
     let numbers = Math.floor((Math.random() * 46) - 6);
     console.log(numbers);
