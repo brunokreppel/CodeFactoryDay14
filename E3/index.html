@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;        }
+        p{
+            text-transform: uppercase;
+
+        }
+        #smiley{
+            font-size: 48px;
+        }
+        body{
+            background-color: rgb(30, 30, 30);
+        }
+        #box{
+            margin:  auto;
+            height: 300px;
+            width: 350px;
+            background-color: RGB(225, 225, 225);
+            border-radius: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #container{
+            width: 100%;
+            height: 100dvh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #input{
+            width: 25%;
+            height: 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<main id="container">
+<div id="box">
+    <div><p>Enter your Name</p></div>
+    <input type="text" id="input" placeholder="Enter Name">
+ <div> <p id="studentGrade"></p></div>
+ <div><p id="smiley"></p></div>
+</div>
+</main>
+
+  
+
+
+    <script src="index.js"></script>
+</body>
+</html>
