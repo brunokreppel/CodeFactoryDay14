@@ -20,9 +20,10 @@ function nameGrade(name) {
     document.getElementById("smiley").innerHTML = "&#128525; "
   }else{
     document.getElementById("box").style.background = " RGB(225, 225, 225)";
-    document.getElementById("smiley").innerHTML = "&#128580; "
+    document.getElementById("smiley").innerHTML = "&#128580;"
+    document.getElementById("box").classList.add("animate__animated", "animate__headShake")
 
-
+    
   }
     
   
